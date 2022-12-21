@@ -18,7 +18,7 @@ import java.util.Map;
  * @author Wenfee
  * @date 2022/12/22
  * <p>
- * 单元测试- 工程模式
+ * 单元测试- 工厂模式
  */
 public class ApiTest {
 
@@ -92,12 +92,12 @@ public class ApiTest {
 
         // 2. 实物商品
         ICommodityService commodityService_2 = storeFactory.getCommodityService(2);
-        Map<String,String> extMap = new HashMap<String,String>();
+        Map<String, String> extMap = new HashMap<String, String>();
         extMap.put("consigneeUserName", "李四");
         extMap.put("consigneeUserPhone", "12345678907");
         extMap.put("consigneeUserAddress", "广东省.深圳市.龙岗区.XX街道.XXX小区.#00-2022");
 
-        commodityService_2.sendCommodity("10001",IdUtil.getSnowflakeNextIdStr(),IdUtil.getSnowflakeNextIdStr(),new HashMap<String, String>() {{
+        commodityService_2.sendCommodity("10001", IdUtil.getSnowflakeNextIdStr(), IdUtil.getSnowflakeNextIdStr(), new HashMap<String, String>() {{
             extMap.put("consigneeUserName", "王五");
             extMap.put("consigneeUserPhone", "12345678907");
             extMap.put("consigneeUserAddress", "广东省.深圳市.龙岗区.XX街道.XXX小区.#00-2022");
@@ -107,7 +107,7 @@ public class ApiTest {
 
         // 3. 第三方兑换卡(爱奇艺)
         ICommodityService commodityService_3 = storeFactory.getCommodityService(3);
-        commodityService_3.sendCommodity("10001",IdUtil.simpleUUID(),null,null);
+        commodityService_3.sendCommodity("10001", IdUtil.simpleUUID(), null, null);
     }
 
     /**
