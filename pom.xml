@@ -11,6 +11,7 @@
     <modules>
         <module>factory-pattern</module>
         <module>factory-abstract</module>
+        <module>builder-pattern</module>
     </modules>
 
     <properties>
