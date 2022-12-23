@@ -30,6 +30,24 @@ public class ApiTest {
     }
 
     /**
+     * 原型代表同一套试卷，通过clone 进行顺序处理
+     *
+     * @throws CloneNotSupportedException
+     */
+    @Test
+    public void test_prototype_demo_02() throws CloneNotSupportedException {
+        com.wenfee.design.prototype.demo_02.QuestionBankController questionBankController = new com.wenfee.design.prototype.demo_02.QuestionBankController();
+
+        System.out.println(questionBankController.createPaper("李六", IdUtil.getSnowflakeNextIdStr()));
+
+        format();
+        System.out.println(questionBankController.createPaper("小七", IdUtil.getSnowflakeNextIdStr()));
+
+        format();
+        System.out.println(questionBankController.createPaper("王八", IdUtil.getSnowflakeNextIdStr()));
+    }
+
+    /**
      * 控制换行格式化输出
      */
     public void format() {
