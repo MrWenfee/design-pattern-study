@@ -13,6 +13,7 @@
         <module>factory-abstract</module>
         <module>builder-pattern</module>
         <module>prototype-pattern</module>
+        <module>singleton-pattern</module>
     </modules>
 
     <properties>
