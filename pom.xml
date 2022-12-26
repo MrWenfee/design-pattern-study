@@ -15,6 +15,7 @@
         <module>prototype-pattern</module>
         <module>singleton-pattern</module>
         <module>adapter-pattern</module>
+        <module>bridging-mode</module>
     </modules>
 
     <properties>
